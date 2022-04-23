@@ -10,7 +10,7 @@ body{
     height: 100vh;
     width: 100%;
     background-image:url(https://images3.alphacoders.com/882/thumb-1920-882391.jpg);
-    background-size:contain;
+    background-size: cover;
 }   
 
 .container{
