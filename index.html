@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+<head>
+    <meta charset = "utf-8"> 
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+    <title> To Do App </title>
+    <link rel = "stylesheet" href = "style.css">
+    <script src="https://kit.fontawesome.com/98c12f3af7.js" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <div class = "container">
+        <div class = "wrapper">
+            <header>To do List</header>
+            <div class ="InputField">
+                <input type = "text" placeholder = "Add Your New To Do">
+                <button><i class="fas fa-plus"></i>
+                </button>
+            </div>
+            <ul class ="todoList">
+            </ul>
+            <dv class="footer">
+                <span>You have <span class = "pendingNumber"></span> pending tasks</span>
+                <button>Clear All</button>
+            </dv> 
+        </div>
+        <div class = "clock">
+            <div class = "timer">
+                <p id = "countdown">0:00</p>
+                <button type = "button" class = "timer__btn timer__btn--control timer__btn--start">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+                <button type = "button" class = "timer__btn timer__btn--reset">
+                    <i class="fa-solid fa-rotate-left"></i>
+                </button>    
+            </div>
+            <div class ="InputTimer">
+                <input type = "text" placeholder = "Enter number of minutes: ">
+                <button>
+                    <i class="fa-solid fa-check"></i>
+                </button>
+            </div>
+    </div>
+    <script src = "script.js"></script> 
+</body>
+</html>
