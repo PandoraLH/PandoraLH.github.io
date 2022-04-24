@@ -81,6 +81,7 @@ const reset = document.querySelector(".timer__btn--reset");
 const ok = document.querySelector(".InputTimer button")
 const play = document.querySelector(".timer__btn--control")
 const countdownEl = document.getElementById('countdown');
+const video = document.querySelector(".video");
 
 InputTime.onkeyup = ()=>{
   let getMinutes = InputTime.value;
@@ -117,6 +118,7 @@ reset.onclick =()=>{
     stop();
     time =0;
     countdownEl.innerHTML = `${0}:${0}${0}`;
+    exitVideo();
 }
 
 function updateInterfaceTime(){
@@ -142,7 +144,6 @@ function updateInterfaceControls(){
 
 
 function start(){
-
     if(time === 0) return;
     
     interval = setInterval(()=>{
@@ -151,6 +152,7 @@ function start(){
 
         if(time === 0){
             stop();
+            timeOut();
         }
     },1000);
     updateInterfaceControls();
@@ -162,3 +164,13 @@ function stop(){
     updateInterfaceControls();
 }
 
+function timeOut(){
+    video.innerHTML = `<video width="400" height="400" controls loop autoplay>
+    <source src = "Fubuki Ringtone.mp4" type = "video/mp4">
+</video>`;
+    return;
+}
+
+function exitVideo(){
+    video.innerHTML = ``;
+}
