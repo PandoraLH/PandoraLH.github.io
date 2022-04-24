@@ -98,11 +98,10 @@ interval = null;
 ok.onclick =()=>{
     let getMinutes = InputTime.value;
     getMinutes = parseInt(getMinutes,10);
-    if(getMinutes < 60){
-        stop();
-        time = getMinutes * 60;
-        updateInterfaceTime();
-    }
+    stop();
+    time = getMinutes * 60;
+    updateInterfaceTime();
+    
 }
 play.onclick =()=>{
     if(interval == null){
